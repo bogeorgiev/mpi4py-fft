@@ -44,6 +44,7 @@ def get_include_dirs():
         append(dirs, prefix, 'include', triplet)
         append(dirs, prefix, 'include')
     dirs.append(numpy.get_include())
+    dirs.append(fftwdir)
     return dirs
 
 def get_library_dirs():
@@ -55,6 +56,7 @@ def get_library_dirs():
         append(dirs, prefix, 'lib' + bits)
         append(dirs, prefix, 'lib', triplet)
         append(dirs, prefix, 'lib')
+    dirs.append(fftwdir)
     return dirs
 
 def get_fftw_libs():
